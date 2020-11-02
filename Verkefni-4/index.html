@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Vörulistinn Haust 2020{% endblock %}
+{% block content %}
+<header class="haus">
+    {% if 'karfa' in session:  %}
+    <span>{{ fjoldi }}</span>
+    {% else %}
+    <span>(0)</span>
+
+    {% endif %}
+    <a href="/karfa"><img class="karfa" src="/static/karfa.jpg"></a>
+    <small>Smelltu á körfuna til að sjá valdar vörur</small>
+</header>
+<div class="wrapper">
+    {% for i in v %}
+        <div>
+            <h2>{{  i[1] }}</h2>
+            <img src="static/{{ i[2] }}" title="{{ i[1] }}">
+            <h2>Verð: <a href="/add/{{ i[0] }}">{{i[3]}}</a></h2>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

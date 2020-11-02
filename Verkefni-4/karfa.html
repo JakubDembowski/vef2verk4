@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Vörulistinn Karfa{% endblock %}
+{% block content %}
+
+<div>
+{% if tom %}
+    <h1>Karfan er tóm</h1>
+{% else %}
+    <h1>Valdar vörur</h1>
+    <div>
+        {% for i in k %}
+        <p>Vara: {{ i[1] }} Verð: {{ i[3] }}</p>
+            - <a href="/eydavoru/{{ i [0] }}"></a>
+        {% endfor %}
+        <p>Samtals verð: {{ samtals }}</p>
+    </div>
+{% endif %}
+</div>
+
+{% endfor %}
+

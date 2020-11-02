@@ -1,0 +1,28 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background: gray;
+    margin: 0 1em 1em 1em;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+
+}
+header,
+footer {
+    margin-bottom:2em;
+}
+div{
+    border: 1px dotted;
+    margin: .5em;
+    border-radius: .5em;
+}
+.karfa{
+    margin-top: 1em;
+    max-width: 60px;
+}
+.vara{
+    text-align: center;
+}
